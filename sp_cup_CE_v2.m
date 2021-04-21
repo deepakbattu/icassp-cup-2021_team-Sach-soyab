@@ -12,9 +12,9 @@ for k=1:500;
 y=receivedSignal(k,:,user_no);
 y_tilde=receivedSignal(k,:,user_no)/transmitSignal(k);
 h_eff_est(:,k)=(P.')*y_tilde.';
-end
 h_eff_final(:,k,user_no)=h_eff_est(:,k);
 end
 
+end
 
 save('h_eff_final','h_eff_final')
